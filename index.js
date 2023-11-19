@@ -29,4 +29,4 @@ function play(playerInput) {
 }
 
 let prompt = window.prompt("Rock Paper or Scissors?");
-document.getElementById("result").innerHTML = play(prompt.toUpperCase());
+document.getElementById("game").innerHTML = play(prompt.toUpperCase());
