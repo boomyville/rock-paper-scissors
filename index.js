@@ -28,14 +28,6 @@ function play(playerInput) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() { 
-  // this function runs when the DOM is ready, i.e. when the document has been parsed
-  document.querySelector('input[type=file]')
-      .addEventListener('change', function(event){
-          ...
-       }
-});
-
 let score = 0;
 while(Math.abs(score) < 5) {
 let prompt = window.prompt("Rock Paper or Scissors?");
