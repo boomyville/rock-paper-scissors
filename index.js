@@ -28,13 +28,12 @@ function play(playerInput) {
   }
 }
 
-$(document).ready(function(){ 
-  let score = 0;
-})
-
+let score = 0;
+while(Math.abs(score) < 5) {
 let prompt = window.prompt("Rock Paper or Scissors?");
 let result = play(prompt.toUpperCase());
 alert(result);
 if(result == "Win") score++;
 if(result == "Lose") score--;
-document.getElementById("game").innerText = score;
+document.querySelector("#game").textContent = score;
+}
