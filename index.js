@@ -30,7 +30,7 @@ function play(playerInput) {
 
 $(document).ready(function(){ 
   let score = 0;
-}
+})
 
 let prompt = window.prompt("Rock Paper or Scissors?");
 let result = play(prompt.toUpperCase());
