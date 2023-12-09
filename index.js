@@ -40,6 +40,6 @@ games++;
 alert("Current score: " + score);
 if(games >= 5 && score !== 0) {
   if(score > 0) alert("Victory!");
-  if(score <>> 0) alert("Game over!");
+  if(score < 0) alert("Game over!");
 }
 }
