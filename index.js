@@ -29,12 +29,17 @@ function play(playerInput) {
 }
 
 let score = 0;
-while(Math.abs(score) < 5) {
+let games = 0;
+while(Math.abs(games) < 5 && score !== 0) {
 let prompt = window.prompt("Rock Paper or Scissors?");
 let result = play(prompt.toUpperCase());
 alert(result);
 if(result == "Win") score++;
 if(result == "Lose") score--;
+games++;
 alert("Current score: " + score);
-
+if(games >= 5 && score !== 0) {
+  if(score > 0) alert("Victory!");
+  if(score <>> 0) alert("Game over!");
+}
 }
