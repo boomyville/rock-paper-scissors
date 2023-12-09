@@ -31,6 +31,7 @@ function play(playerInput) {
 let score = 0;
 let games = 0;
 while(Math.abs(games) < 5 && score !== 0) {
+  console.log("Games played: " + games)
 let prompt = window.prompt("Rock Paper or Scissors?");
 let result = play(prompt.toUpperCase());
 alert(result);
