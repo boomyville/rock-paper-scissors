@@ -28,6 +28,8 @@ function play(playerInput) {
   }
 }
 
+alert("ff")
+
 let score = 0;
 let games = 0;
 while(Math.abs(games) < 5 && score !== 0) {
