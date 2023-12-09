@@ -35,5 +35,6 @@ let result = play(prompt.toUpperCase());
 alert(result);
 if(result == "Win") score++;
 if(result == "Lose") score--;
-document.querySelector("#game").textContent = score;
+alert("Current score: " + score);
+
 }
