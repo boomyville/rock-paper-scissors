@@ -37,7 +37,7 @@ let result = play(prompt.toUpperCase());
 alert(result);
 if(result == "Win") score++;
 if(result == "Lose") score--;
-games++;
+if(result !== "Invalid") games++;
 alert("Current score: " + score);
 if(games >= 5) {
   if(score > 0) alert("Victory!");
