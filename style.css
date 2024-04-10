@@ -1,13 +1,19 @@
 /* Set up the flex container */
+
+body {
+  font-family: 'Fira Sans', Tahoma, Geneva, Verdana, sans-serif;
+}
 .container, .box {
     display: flex;
     justify-content: space-around; /* Distribute items evenly along the main axis */
     padding: 16px;
+    background-color: lightcyan;
   }
 
   .box {
     flex-direction: column;
   }
+
   /* Style the buttons */
   button {
     padding: 10px; /* Add padding for spacing */
