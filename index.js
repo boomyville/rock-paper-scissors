@@ -29,8 +29,11 @@ function play(playerInput) {
 }
 
 
-function event(button) {
-  let result = play(button.className.toUpperCase());
+
+// Lets use the DOM
+document.querySelectorAll("button").forEach(function(button) {
+  button.addEventListener('click', function() {
+    let result = play(button.className.toUpperCase());
   console.log(button.className.toUpperCase() + ": " + result);
   document.querySelector("p.score").textContent = Number(document.querySelector("p.score").textContent) + Number(result)
   document.querySelector("p.games").textContent = Number(document.querySelector("p.games").textContent) + 1;
@@ -42,9 +45,5 @@ function event(button) {
   } else {
     document.querySelector("p.message").textContent = "Lose..."
   }
-}
-
-// Lets use the DOM
-document.querySelectorAll("button").forEach(function(button) {
-  button.addEventListener('click', event(button));
+  });
 })
