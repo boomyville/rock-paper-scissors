@@ -31,12 +31,7 @@ function play(playerInput) {
 let score = 0;
 let games = 5; //Should be 0
 
-// Lets use the DOM
-document.querySelectorAll("button").forEach(function(button) {
-  
-  button.addEventListener('event', event);
-
-  function event() {
+function event() {
   let result = document.querySelector("score");
   document.querySelector("p.score").textContent = Number(document.querySelector("p.score").textContent) + Number(result)
   document.querySelector("p.games").textContent = Number(document.querySelector("p.games").textContent) + 1;
@@ -49,4 +44,8 @@ document.querySelectorAll("button").forEach(function(button) {
     document.querySelector("p.message").textContent = "Lose..."
   }
 }
+
+// Lets use the DOM
+document.querySelectorAll("button").forEach(function(button) {
+  button.addEventListener('click', event);
 })
