@@ -28,11 +28,10 @@ function play(playerInput) {
   }
 }
 
-let score = 0;
-let games = 5; //Should be 0
 
 function event(button) {
   let result = play(button.className.toUpperCase());
+  console.log(button.className.toUpperCase() + ": " + result);
   document.querySelector("p.score").textContent = Number(document.querySelector("p.score").textContent) + Number(result)
   document.querySelector("p.games").textContent = Number(document.querySelector("p.games").textContent) + 1;
   
