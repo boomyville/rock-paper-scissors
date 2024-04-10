@@ -1,5 +1,5 @@
 /* Set up the flex container */
-.container {
+.container, .box {
     display: flex;
     justify-content: space-around; /* Distribute items evenly along the main axis */
     padding: 24px;
