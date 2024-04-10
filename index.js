@@ -32,3 +32,7 @@ let score = 0;
 let games = 5; //Should be 0
 
 // Lets use the DOM
+document.querySelectorAll("button").forEach(function(button) {
+  play(button.className.toUpperCase())
+  button.addEventListener('event', event);
+})
