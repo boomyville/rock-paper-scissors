@@ -31,8 +31,8 @@ function play(playerInput) {
 let score = 0;
 let games = 5; //Should be 0
 
-function event() {
-  let result = document.querySelector("score");
+function event(button) {
+  let result = play(button.className.toUpperCase());
   document.querySelector("p.score").textContent = Number(document.querySelector("p.score").textContent) + Number(result)
   document.querySelector("p.games").textContent = Number(document.querySelector("p.games").textContent) + 1;
   
@@ -47,5 +47,5 @@ function event() {
 
 // Lets use the DOM
 document.querySelectorAll("button").forEach(function(button) {
-  button.addEventListener('click', event);
+  button.addEventListener('click', event(button));
 })
