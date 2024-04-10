@@ -34,6 +34,16 @@ let games = 5; //Should be 0
 // Lets use the DOM
 document.querySelectorAll("button").forEach(function(button) {
   
-  play(button.className.toUpperCase())
+  let result = document.querySelector("score");
+  document.querySelector("score").textContent = Number(document.querySelector("score").textContent) + Number(result)
+  document.querySelector("games").textContent = Number(document.querySelector("games").textContent) + 1;
+  
+  if(result == 0) {
+    document.querySelector("games").textContent = "Draw."
+  } else if (result == 1) {
+    document.querySelector("games").textContent = "Win!"
+  } else {
+    document.querySelector("games").textContent = "Lose..."
+  }
   button.addEventListener('event', event);
 })
