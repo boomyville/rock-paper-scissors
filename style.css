@@ -2,7 +2,7 @@
 .container, .box {
     display: flex;
     justify-content: space-around; /* Distribute items evenly along the main axis */
-    padding: 24px;
+    padding: 16px;
   }
   
   /* Style the buttons */

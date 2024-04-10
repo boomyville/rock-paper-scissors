@@ -30,18 +30,5 @@ function play(playerInput) {
 
 let score = 0;
 let games = 5; //Should be 0
-while(Math.abs(games) < 5) {
-  console.log("Games played: " + games)
-let prompt = window.prompt("Rock Paper or Scissors?");
-let result = play(prompt.toUpperCase());
-alert(result);
-if(result == "Win") score++;
-if(result == "Lose") score--;
-if(result !== "Invalid") games++;
-alert("Current score: " + score);
-if(games >= 5) {
-  if(score > 0) alert("Victory!");
-  if(score < 0) alert("Game over!");
-  if(score == 0) alert("Games tied")
-}
-}
+
+// Lets use the DOM
