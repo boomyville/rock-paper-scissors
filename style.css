@@ -6,7 +6,7 @@
   }
   
   /* Style the buttons */
-  .button {
+  button {
     padding: 10px; /* Add padding for spacing */
     background-color: #f0f0f0;
     border: 4px solid #ccc;
