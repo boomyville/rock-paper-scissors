@@ -6,13 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Boomarian Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">	
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
   </head>
   <body>
 
     <h1>Boomarian Rock and Paper Scissors - Javascript edition</h1>
-    <p>This game is purely driven by prompt/alert javascript functions.</p>
-    <p>Refresh the browser to start a new game</p>
-		  
+    <p class="message">Click a button to start a game</p>
+    <div class="container">
+      <div class="box"><h3>Score</h3><p class="score">0</p>  
+      </div>
+      <div class="box"><h3>Games Played</h3><p class="games">0</p>  
+      </div>
+    </div>		
+<div class="container">
+  <button type="button" class="scissors">Scissors</button>
+  <button type="button" class="rock">Rock</button>
+  <button type="button" class="paper">Paper</button>
+</div>
+
   </body>
 </html>

@@ -9,39 +9,41 @@ function play(playerInput) {
   let computerInput = getComputerChoice();
   switch(playerInput) {
     case "ROCK":
-      if(computerInput == "ROCK") return "Draw"
-      if(computerInput == "SCISSORS") return "Win"
-      if(computerInput == "PAPER") return "Lose"
+      if(computerInput == "ROCK") return 0
+      if(computerInput == "SCISSORS") return 1
+      if(computerInput == "PAPER") return -1
       break;
     case "SCISSORS":
-      if(computerInput == "ROCK") return "Lose"
-      if(computerInput == "SCISSORS") return "Draw"
-      if(computerInput == "PAPER") return "Win"
+      if(computerInput == "ROCK") return -1
+      if(computerInput == "SCISSORS") return 0
+      if(computerInput == "PAPER") return 1
       break;
     case "PAPER":
-      if(computerInput == "ROCK") return "Win"
-      if(computerInput == "SCISSORS") return "Lose"
-      if(computerInput == "PAPER") return "Draw"
+      if(computerInput == "ROCK") return 1
+      if(computerInput == "SCISSORS") return -1
+      if(computerInput == "PAPER") return 0
       break;
     default: 
       return "Invalid"
   }
 }
 
-let score = 0;
-let games = 0;
-while(Math.abs(games) < 5) {
-  console.log("Games played: " + games)
-let prompt = window.prompt("Rock Paper or Scissors?");
-let result = play(prompt.toUpperCase());
-alert(result);
-if(result == "Win") score++;
-if(result == "Lose") score--;
-if(result !== "Invalid") games++;
-alert("Current score: " + score);
-if(games >= 5) {
-  if(score > 0) alert("Victory!");
-  if(score < 0) alert("Game over!");
-  if(score == 0) alert("Games tied")
-}
-}
+
+
+// Lets use the DOM
+document.querySelectorAll("button").forEach(function(button) {
+  button.addEventListener('click', function() {
+    let result = play(button.className.toUpperCase());
+  console.log(button.className.toUpperCase() + ": " + result);
+  document.querySelector("p.score").textContent = Number(document.querySelector("p.score").textContent) + Number(result)
+  document.querySelector("p.games").textContent = Number(document.querySelector("p.games").textContent) + 1;
+  
+  if(result == 0) {
+    document.querySelector("p.message").textContent = "Draw."
+  } else if (result == 1) {
+    document.querySelector("p.message").textContent = "Win!"
+  } else {
+    document.querySelector("p.message").textContent = "Lose..."
+  }
+  });
+})
