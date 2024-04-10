@@ -4,7 +4,10 @@
     justify-content: space-around; /* Distribute items evenly along the main axis */
     padding: 16px;
   }
-  
+
+  .box {
+    flex-direction: column;
+  }
   /* Style the buttons */
   button {
     padding: 10px; /* Add padding for spacing */

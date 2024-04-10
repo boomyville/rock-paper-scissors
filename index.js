@@ -34,16 +34,19 @@ let games = 5; //Should be 0
 // Lets use the DOM
 document.querySelectorAll("button").forEach(function(button) {
   
+  button.addEventListener('event', event);
+
+  function event() {
   let result = document.querySelector("score");
-  document.querySelector("score").textContent = Number(document.querySelector("score").textContent) + Number(result)
-  document.querySelector("games").textContent = Number(document.querySelector("games").textContent) + 1;
+  document.querySelector("p.score").textContent = Number(document.querySelector("p.score").textContent) + Number(result)
+  document.querySelector("p.games").textContent = Number(document.querySelector("p.games").textContent) + 1;
   
   if(result == 0) {
-    document.querySelector("games").textContent = "Draw."
+    document.querySelector("p.message").textContent = "Draw."
   } else if (result == 1) {
-    document.querySelector("games").textContent = "Win!"
+    document.querySelector("p.message").textContent = "Win!"
   } else {
-    document.querySelector("games").textContent = "Lose..."
+    document.querySelector("p.message").textContent = "Lose..."
   }
-  button.addEventListener('event', event);
+}
 })
